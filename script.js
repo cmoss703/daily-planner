@@ -7,28 +7,42 @@ $(document).ready(function () {
         currentTime();
     }, 1000);
 
+    populateBoxes()
+
+    function populateBoxes() {
+
+    for (var j = 9; j < 20; j++) {
+
+        var retrieveID = "#task-hour" + [j]
+
+        $(retrieveID).val(localStorage.getItem("saved hour" + [j]));
+
+    }
+};
+
+// var obj = {title: attribute}
 
 $(".btn-success").on("click", function () {
 
-    var saveID = $(this).attr("id");
-    var taskID = "task-" + saveID;
+    var saveID = $(this).attr("id")
+    taskID = "#task-" + saveID;
 
-    console.log(taskID);
+    console.log($(taskID).val());
 
-    // var userData = taskID.valueOf();
+    var userData = $(taskID).val();
 
-    // var savedText = localStorage.setItem(savedText, userData);
+    localStorage.setItem("saved " + saveID, userData);
 
 });
 
-$(".btn-danger").on("click", function() {
+$(".btn-danger").on("click", function () {
 
-    var clearID = $(this).attr("id");
-    var taskID = "#task-hour" + clearID.substring(5 , 7);
+    var clearID = $(this).attr("id")
+    taskID = "#task-hour" + clearID.substring(5, 7);
 
     console.log(taskID);
 
-    $(taskID).text('');
+    $(taskID).val('');
 
 });
 
@@ -56,6 +70,14 @@ function timePast() {
     }
 
 };
+
+$("#clearDay").on("click", function () {
+
+    localStorage.clear();
+
+    populateBoxes();
+
+});
 
 timePast();
 
