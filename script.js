@@ -51,6 +51,8 @@ $(document).ready(function () {
 
         localStorage.removeItem("saved " + hourID);
 
+        populateBoxes();
+
     });
 
     // this function updates the class of a time box based on whether the respective hour has passed, 
@@ -92,7 +94,7 @@ $(document).ready(function () {
 
         populateBoxes();
 
-        console.log("Day cleared")
+        console.log("Day cleared");
 
     });
 
