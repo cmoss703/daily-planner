@@ -32,7 +32,7 @@ This project was successfully deployed, Need proof? Click the links below to giv
 
 See some images of the page in action below:
 
-![time past](images/timepast.png)
+![3pm time](images/3pm.png)
 
 ![saving in storage](images/storage.png)
 
