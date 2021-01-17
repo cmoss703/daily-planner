@@ -16,7 +16,9 @@ A clock is displayed with a time interval showing the exact time at the top of t
 
 The current time is noted, and used to determined whether each time block hour has occurred in the past, is yet to occur in the future, or is the current hour. The boxes are formatted accordingly by assigning a respective class to each one. 
 
+Users can type in tasks for the day and click save, which saves that text into local storage. The saved text will appear when the document is reloaded. This is achieved by using a for loop to check if there is any saved information for each time block when the document has loaded.
 
+Users can delete an entry by clicking the clear button next to the timed task, or clear the entire schedule by clicking the "Clear Schedule" button at the top of the page.
 
 ## DEPLOYED!
 
@@ -27,3 +29,11 @@ This project was successfully deployed, Need proof? Click the links below to giv
 [Github Repo](https://github.com/cmoss703/daily-planner)
 
 ## PROOF
+
+See some images of the page in action below:
+
+![time past](images/timepast.png)
+
+![saving in storage](images/storage.png)
+
+![7pm time](images/7pm.png)
